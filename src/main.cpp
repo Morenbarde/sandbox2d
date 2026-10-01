@@ -8,6 +8,7 @@ int main() {
     Starter start;
 
     std::cout << start.say_hello() << std::endl;
+    std::cout << "Hello sandbox" << std::endl;
 
     return 0;
 }

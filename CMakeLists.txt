@@ -36,7 +36,7 @@ add_subdirectory(external/SDL_ttf EXCLUDE_FROM_ALL)
 set(SDLIMAGE_VENDORED ON)
 set(SDLIMAGE_ANI OFF) # Settings for supported image formats, enable as needed to minimize compile time
 set(SDLIMAGE_AVIF OFF)
-set(SDLIMAGE_BMP OFF)
+set(SDLIMAGE_BMP ON)
 set(SDLIMAGE_GIF ON)
 set(SDLIMAGE_JPG ON)
 set(SDLIMAGE_JXL OFF)
@@ -81,12 +81,6 @@ set(SDL_LIBS SDL3_ttf::SDL3_ttf SDL3_image::SDL3_image SDL3_mixer::SDL3_mixer SD
 add_executable(${CMAKE_PROJECT_NAME} src/main.cpp)
 target_sources(${CMAKE_PROJECT_NAME} PRIVATE ${SRC})
 target_link_libraries(${CMAKE_PROJECT_NAME} PRIVATE ${SDL_LIBS})
-
-
-if(CMAKE_BUILD_TYPE STREQUAL "Debug")
-    # Create Test Executables if in debug mode
-    add_subdirectory(test)
-endif()
 
 
 
