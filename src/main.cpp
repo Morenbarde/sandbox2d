@@ -1,14 +1,19 @@
 #include <iostream>
 
-#include "starter.h"
+#include "sandbox.h"
+#include "render_view.h"
 
 int main() {
 
+    Sandbox sandbox = Sandbox();
+    sandbox.start();
 
-    Starter start;
+    RenderView view = RenderView();
+    view.init();
 
-    std::cout << start.say_hello() << std::endl;
-    std::cout << "Hello sandbox" << std::endl;
+    while(sandbox.isRunning()) {
+        view.update(sandbox);
+    }
 
     return 0;
 }

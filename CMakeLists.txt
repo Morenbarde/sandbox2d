@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.16)
 
 # Project name
-project(sdl3-starter)
+project(sandbox2d)
 
 # Default build type
 if(NOT CMAKE_BUILD_TYPE)
