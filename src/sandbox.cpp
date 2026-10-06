@@ -16,3 +16,8 @@ void Sandbox::start() {
 void Sandbox::quit() {
     running = false;
 }
+
+
+void Sandbox::update() {
+    
+}

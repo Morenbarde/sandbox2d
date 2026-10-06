@@ -1,9 +1,12 @@
 #include <iostream>
 
 #include "sandbox.h"
+#include "event_manager.h"
 #include "render_view.h"
 
 int main() {
+
+    EventManager manager;
 
     Sandbox sandbox = Sandbox();
     sandbox.start();
@@ -12,7 +15,9 @@ int main() {
     view.init();
 
     while(sandbox.isRunning()) {
-        view.update(sandbox);
+        manager.pollEvents(sandbox);
+        sandbox.update();
+        view.update();
     }
 
     return 0;

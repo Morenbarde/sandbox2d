@@ -1,10 +1,8 @@
-#ifndef _RENDERVIEW_H_
-#define _RENDERVIEW_H_
+#ifndef _RENDER_VIEW_H_
+#define _RENDER_VIEW_H_
 
 #include <SDL3/SDL.h>
 #include <SDL3/SDL_init.h>
-
-#include "sandbox.h"
 
 /*
     Manages SDL3 Rendering and handling
@@ -17,7 +15,7 @@ public:
 
     bool init();
 
-    void update(Sandbox& sandbox);
+    void update();
 
 private:
     SDL_Window *window;
@@ -25,7 +23,6 @@ private:
     SDL_Event event;
 
     void render();
-    void pollEvents(Sandbox& sandbox);
 
 
 };

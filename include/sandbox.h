@@ -14,6 +14,8 @@ public:
     void start();
     void quit();
 
+    void update();
+
 private:
     bool running;
 

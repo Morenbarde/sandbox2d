@@ -31,10 +31,10 @@ bool RenderView::init() {
 }
 
 
-void RenderView::update(Sandbox& sandbox) {
+void RenderView::update() {
 
     render();
-    pollEvents(sandbox);
+    
 }
 
 
@@ -44,12 +44,4 @@ void RenderView::render() {
     SDL_RenderClear(renderer);
     SDL_RenderPresent(renderer);
 
-}
-
-
-void RenderView::pollEvents(Sandbox& sandbox) {
-    SDL_PollEvent(&event);
-    if (event.type == SDL_EVENT_QUIT) {
-        sandbox.quit();
-    }
 }
