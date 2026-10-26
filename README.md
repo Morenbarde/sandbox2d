@@ -1,19 +1,19 @@
-# sdl3-starter
-This repository defines a simple base for setting up an SDL3 project in a Linux environmet.
+# sandbox2d
+This repository contains a simple set of programs for exploring various 2d physics simulation, visualized using SDL3.
 
 
 ## Installation
 
 To install with SDL submodules, run:
 ```
-git clone --depth=1 --recurse-submodules -j8 https://github.com/Morenbarde/sdl3-starter.git
-cd sdl3-starter
+git clone --depth=1 --recurse-submodules -j8 https://github.com/Morenbarde/sandbox2d.git
+cd sandbox2d
 ```
 
 ## Usage
-This repository is designed to be built with a CMake environment. Modify [CMakeLists.txt](CMakeLists.txt) to change the project name or add any desired executables.
+This repository is designed to be built with a CMake environment.
 
-To generate makefiles, run:
+To generate makefiles run cmake from the base directory. By default, this will be done in Debug mode.
 ```
 cmake -B build
 ```
@@ -24,14 +24,7 @@ cd build
 make
 ```
 
-To run the project, run the generated executable. By default, this will be the project name defined in the CMakeLists.txt file. As is, this will be:
+To run the project, run the generated executable in the bin folder:
 ```
-./sdl3-starter
+./bin/sandbox2d
 ```
-
-If any files are added to the source directory, cmake needs to be run again to detect them. This can be done from the build directory.
-```
-cmake ..
-```
-
-Building the project will also create several test files which can be used to make sure each of the SDL libraries are linked and working correctly. These are generated in the build/test folder.
